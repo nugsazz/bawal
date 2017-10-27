@@ -1,4 +1,4 @@
-Line Alphat JS
+Line Etot JS
 
 # require node >= v8.x.x
 check your nodejs version

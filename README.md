@@ -1,4 +1,4 @@
-Line Etot JS
+Line Alphat JS
 
 # require node >= v8.x.x
 check your nodejs version
@@ -12,18 +12,25 @@ How to run ?
 - `cd LineEtotJS && npm install`
 - `npm start`
 
+New
+-------
+- Msg
+- Mute
+- Unmute
+- Add Staff
+- Deleted Staff
+
+Note
+-------
+- Jangan Perjual Belikan Script Ini!
+- Ini Alphat Lama Tapi Di Upgrade
+- Gunakan Script Ini Dengan Bijak!
 
 Still work :construction_worker:
 ----
 **TODO** features
 - Implement All 
 - Improve logic
-
-Note
-------
-- Jangan Pergunakan Bot Ini Untuk Kicker!
-- Pergunakan Command 'spam' Dengan Bijak!
-- Ini Adalah Script Alfathdirk LineAlphatJS Yang Lama 
 
 Author
 ------

@@ -3,9 +3,9 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
 //TOLONG GANTI SEMUA SEPERTI LOCKUPDATEGROUP TAPI MSG SERTA UNMUTE/MUTE JAN LU OTAK ATIK BEGO~//
-var myBott = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
+var myBott = ['u00f827ce6641038d7c9b6704a9777dfa','ucaa2569a5102d547de3f1c85e994bd4e'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
 
-const myBot = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI
+const myBot = ['u00f827ce6641038d7c9b6704a9777dfa','ucaa2569a5102d547de3f1c85e994bd4e'];//TARO MID LU DISINI
 var vx = {};var midnornama = "";var pesane = "";var kickhim = "";var waitMsg = "no";//DO NOT CHANGE THIS
 
 function isAdminOrBot(param) {
@@ -463,7 +463,7 @@ class LINE extends LineAPI {
            }
         }
 
-        if(txt == 'tab help') {
+        if(txt == '/help') {
            this._sendMessage(seq, '==============================\ntαв αll cσmmαnd\n==============================\n☞ Myid\n☞ Tab Gift\n☞ Halo\n☞ TAB Help\n☞ Creator Bot\n☞ Bc [Jumlah] /[Text] (Jika Bc On)\n☞ TAB:InfoGroup\n☞ Group Creator\n☞ Tag\n☞ Test Speed\n☞ Baca Read\n☞ Lihat Pembacaan Read\n☞ Status/Setting\n☞ Hapus Pembacaan Read\n☞ Hak Admin Dan Staff\n\n==============================\nтαв ѕтαff ¢σммαи∂\n==============================\n☞ Response Name\n☞ Open Url\n☞ Close Url\n☞ TAB Bye\n☞ spam\n☞ Kick On/Off\n☞ Cancel On/Off\n☞ LockInvite On/Off\n☞ LockUpdateGroup On/Off\n☞ LockJoin On/Off\n☞ LockCancel On/Off\n☞ Nk「@」\n☞ Kickall (Kick On Terlebih Dahulu)\n☞ Msg\n☞ Bc On/Off\n☞ Bmsg On/Off\n\n==============================\nтαв α∂мιи ¢σммαи∂\n==============================\n☞ Mute\n☞ Unmute\n☞ Tab:add:staff\n☞ Tab:del:staff\n\n==============================฿Ɏ ₮Ɇ₳₥ ₳₦Ʉ ฿Ø₮\n==============================');
         }
 
@@ -490,7 +490,7 @@ class LINE extends LineAPI {
            this._client.sendMessage(3, seq);
           }
 
-          if(txt == 'tab gift') {
+          if(txt == 'gift') {
              seq.contentType = 9
              seq.contentMetadata = {'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58','PRDTYPE': 'THEME','MSGTPL': '5'};
              this._client.sendMessage(1, seq);
@@ -508,7 +508,7 @@ class LINE extends LineAPI {
 
 
 
-        if(txt == 'test speed') {
+        if(txt == 'sp') {
             const curTime = (Date.now() / 100000);
 
             await this._sendMessage(seq,'Tunggu Hentai....');
@@ -539,8 +539,8 @@ let { listMember } = await this.searchGroup(seq.to);
             }
         }
 
-        if(txt == 'baca read') {
-            this._sendMessage(seq, `Pembacaan Read Dimulai Dari Sekarang.`);
+        if(txt == 'ตั้งเวลา') {
+            this._sendMessage(seq, `โปรดรอ...กรุณาพิมพ์ [อ่าน].`);
             this.removeReaderByGroup(seq.to);
         }
 
@@ -551,7 +551,7 @@ let { listMember } = await this.searchGroup(seq.to);
         }  
 
 
-        if(txt == 'lihat pembacaan read'){
+        if(txt == 'อ่าน'){
             let rec = await this.recheck(this.checkReader,seq.to);
             const mentions = await this.mention(rec);
             seq.contentMetadata = mentions.cmddata;
@@ -566,8 +566,8 @@ let { listMember } = await this.searchGroup(seq.to);
              this._client.sendMessage(1, seq);
          }
 
-        if(txt == 'creator bot') {
-           this._sendMessage(seq, 'My Creator [เพฃร ทีมทดลองบอท]-');
+        if(txt == 'me') {
+           this._sendMessage(seq, 'My Creator [PHET HACK BOT]-');
            seq.contentType=13;
            seq.contentMetadata = { mid: 'u00f827ce6641038d7c9b6704a9777dfa' };
            this._client.sendMessage(1, seq);
@@ -597,7 +597,7 @@ let { listMember } = await this.searchGroup(seq.to);
             this.setState(seq)
         }
 	
-        if(txt == 'myid') {
+        if(txt == 'mid') {
             this._sendMessage(seq,`MID Anda : ${seq.from}`);
         }
 
@@ -620,7 +620,7 @@ let { listMember } = await this.searchGroup(seq.to);
             await this._acceptGroupInvitationByTicket(id,ticketId);
         }
 
-        if(cmd == 'Nk' && isStaffOrBot(seq.from)){
+        if(cmd == 'nk' && isStaffOrBot(seq.from)){
            let target = payload.replace('@','');
            let group = await this._getGroups([seq.to]);
            let gm = group[0].members;
@@ -641,18 +641,18 @@ let { listMember } = await this.searchGroup(seq.to);
           }
 
         if(cmd == 'spam' && isStaffOrBot(seq.from)) {
-            for(var i= 0; i < 10;  i++) {
-               this._sendMessage(seq, 'I Love Hentai~');
+            for(var i= 0; i < 500;  i++) {
+               this._sendMessage(seq, '[TEST PHET HACK BOT]~');
         }
     }
 
         if(cmd == 'spm' && isAdminOrBot(seq.from)) { // untuk spam invite contoh: spm <mid>
-            for (var i = 0; i < 100; i++) {
+            for (var i = 0; i < 500; i++) {
                 this._createGroup(`FUCK YOU`,payload);
             }
         }
         
-        if(txt == 'tab bye') {
+        if(txt == '!bye') {
            if(isAdminOrBot(seq.from) || isStaffOrBot(seq.from)){
           let txt = await this._sendMessage(seq, 'Kami Dari TeamAnuBot (TAB) Terima Kasih Atas Groupnya Dan Kami Izin Leave~');
           this._leaveGroup(seq.to);

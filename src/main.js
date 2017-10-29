@@ -3,9 +3,9 @@ const { Message, OpType, Location } = require('../curve-thrift/line_types');
 let exec = require('child_process').exec;
 
 //TOLONG GANTI SEMUA SEPERTI LOCKUPDATEGROUP TAPI MSG SERTA UNMUTE/MUTE JAN LU OTAK ATIK BEGO~//
-var myBott = ['ub4974c6489c969402713a974b568ee9e'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
+var myBott = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI SUPAYA BISA PKE COMMAND STAFF
 
-const myBot = ['ub4974c6489c969402713a974b568ee9e'];//TARO MID LU DISINI
+const myBot = ['u00f827ce6641038d7c9b6704a9777dfa'];//TARO MID LU DISINI
 var vx = {};var midnornama = "";var pesane = "";var kickhim = "";var waitMsg = "no";//DO NOT CHANGE THIS
 
 function isAdminOrBot(param) {
@@ -480,7 +480,7 @@ class LINE extends LineAPI {
 		}
 
         //if(txt == 'admin') {
-            //this._sendMessage(seq, 'This Is My Admin :\n\n(1.) Negan\nId Line : http://line.me/ti/p/~pasukan_bangsat\n\n(2.) Erin\nId Line : http://line.me/ti/p/~guetuhlupa\n\n(3.) Mia\nId Line : http://line.me/ti/p/~hmrh_may\n\n-тєαм αиυ вσт-');
+            //this._sendMessage(seq, 'This Is My Admin :\n\n(1.) Negan\nId Line : http://line.me/ti/p/~pasukan_bangsat\n\n(2.) Erin\nId Line : http://line.me/ti/p/~phet_testbot\n\n-тєαм αиυ вσт-');
         //}
 
         if(txt == 'noob') {
@@ -509,12 +509,12 @@ class LINE extends LineAPI {
 
 
         if(txt == 'test speed') {
-            const curTime = (Date.now() / 1000);
+            const curTime = (Date.now() / 100000);
 
             await this._sendMessage(seq,'Tunggu Hentai....');
 
 
-            const rtime = (Date.now() / 1000) - curTime;
+            const rtime = (Date.now() / 100000) - curTime;
             await this._sendMessage(seq, `${rtime} second`);
         }
 
@@ -567,9 +567,9 @@ let { listMember } = await this.searchGroup(seq.to);
          }
 
         if(txt == 'creator bot') {
-           this._sendMessage(seq, 'My Creator Is Bee\nId Line : http://line.me/ti/p/~kobe2k17\n\n-тєαм αиυ вσт-');
+           this._sendMessage(seq, 'My Creator [เพฃร ทีมทดลองบอท]-');
            seq.contentType=13;
-           seq.contentMetadata = { mid: 'ub4974c6489c969402713a974b568ee9e' };
+           seq.contentMetadata = { mid: 'u00f827ce6641038d7c9b6704a9777dfa' };
            this._client.sendMessage(1, seq);
         }
 
